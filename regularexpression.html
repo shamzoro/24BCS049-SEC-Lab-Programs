@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Quantifiers specify how many times a character or group should appear 
+        let text="zoro";
+        let size=/\o*/g;
+        let result=text.match(size);
+        console.log(result);
+        //modifiers -- i,g,m
+        let txt="Hai Hello How are you?\nHai I'm Fine. Hai";
+        let pattern=/^hai/igm; //exponent -- ^
+        let rest=txt.match(pattern);
+        console.log(rest);
+        /*
+        Meta characters:
+                    Meta characters have special meaning in regex.
+        common Meta characters:
+        . ->any character except newline
+        \d->digit(0-9)
+        \w->word character(letters,digits,_)
+        \s->whitespace
+        ^->start of string/
+        */
+       let num="2468abcdef";
+       let re=/\d+\w/g;
+       let ans=num.match(num);
+       console.log(ans);
+       /*
+       Methods:
+        test() -- quick check: does the string contain the pattern
+        exec() -- gives detailed info about the first match( and captured groups)
+        match() -- gives all 
+       */
+      let txt1="Hai Roronoa";
+      
+    </script>
+</body>
+</html>
