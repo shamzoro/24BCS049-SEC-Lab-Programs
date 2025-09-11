@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        local storage -> stores data permanently (until cleared by user or code)
+        syntax:
+        localStorage.setItem("key","value");
+        localStorage.getItem("key");
+        */
+       localStorage.setItem("username","zoro");
+       console.log(localStorage.getItem("username"));
+       localStorage.removeItem("username");
+       localStorage.clear();
+       /*
+       if you want to store arrays...local storage only stores strings ,not arrays...
+       so we need to convert arrays into a string( using JSON.stringify) before storing...
+       */
+      let name=["zoro","luffy","sanji"];
+      localStorage.setItem("zoro",JSON.stringify(zoro));
+      let storedVal=JSON.parse(localStorage.getItem("zoro"));
+      console.log(storedVal);
+      let person=[{
+        "name":"js",
+        "job":"developer"
+      }]
+      localStorage.setItem("person",JSON.stringify(person));
+      let arr=JSON.parse(localStorage.getItem("person"));
+      console.log(arr);
+     //session storage
+     sessionStorage.setItem("fruits","apple");
+     sessionStorage.getItem("fruits");
+     </script>
+</body>
+</html>
